@@ -1,10 +1,19 @@
 const path = require('path');
 
+// Must install webpack with each new project:
+// npm install webpack webpack-cli --save-dev
+// npx webpack --watch
+
+// If loaders need to be re-installed:
+// npm install --save-dev style-loader css-loader
+// npm install --save-dev csv-loader xml-loader
+
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    devtool: 'source-map',
   },
   module: {
     rules: [
